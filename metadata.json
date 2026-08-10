@@ -1,0 +1,6 @@
+{
+  "name": "AdvocacyPrep",
+  "description": "Tactical IEP and 504 Plan meeting preparation packet generator for parents.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
