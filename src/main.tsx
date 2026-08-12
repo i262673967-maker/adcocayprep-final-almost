@@ -9,24 +9,29 @@ import './index.css';
 
 const path = window.location.pathname.replace(/\/+$/, '') || '/';
 
-const Page = (() => {
-  switch (path) {
-    case '/pricing':
-      return <Pricing />;
+let Page;
 
-    case '/terms':
-      return <Terms />;
+switch (path) {
+  case '/pricing':
+    Page = <Pricing />;
+    break;
 
-    case '/privacy':
-      return <Privacy />;
+  case '/terms':
+    Page = <Terms />;
+    break;
 
-    case '/refunds':
-      return <Refunds />;
+  case '/privacy':
+    Page = <Privacy />;
+    break;
 
-    default:
-      return <App />;
-  }
-})();
+  case '/refunds':
+    Page = <Refunds />;
+    break;
+
+  default:
+    Page = <App />;
+    break;
+}
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
